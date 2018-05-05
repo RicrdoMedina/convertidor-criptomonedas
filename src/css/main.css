@@ -1,0 +1,150 @@
+html{
+ height: 100%;
+}
+body {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(-45deg, #986262, rgba(4, 118, 152, 0.6), #607d8b, #986262);
+	background-size: 400% 400%;
+  animation: Gradient 15s ease infinite;
+  width:100%;
+  height: 100%;
+}
+label {
+  font-weight: bold;
+  color:#928f8f;
+  cursor:pointer;
+}
+.wrapper{
+  display: grid;
+  grid-template: 1fr / 1fr;
+  grid-template-areas: "container-convertidor";
+  width: 100%;
+  height: 100%;
+  justify-items: center;
+  align-items: center;
+
+  & .container{
+    grid-area: container-convertidor;
+    background: #fff;
+    height: auto;
+    width: 60%;
+    box-shadow: inset 0px 0px 22px #986262;
+    border-radius: 10px;
+  }
+
+  & .container:hover{
+    box-shadow: inset 0px 0px 22px #e20808;
+  }
+}
+.title{
+  text-align: center;
+  margin-top: 3em;
+  margin-bottom: 2em;
+}
+
+.form-criptomonedas{
+  margin: 1em auto;
+  width: 80%;
+
+  & .select{
+    display: block;
+    width: 100%;
+    margin: 0 0 1.5em;
+    border:none;
+    border-bottom: 1px solid #fbb7a7;
+    outline: 0;
+    padding: 1em 0;
+  }
+
+  & .select:focus, & .select:hover{
+    border-bottom: 1px solid red;
+  }
+
+  & .btn{
+    margin: 1em;
+    min-width: 136px;
+  }
+}
+.btn{
+  cursor:pointer;
+  border-radius: 100px;
+  box-shadow: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 20px;
+  padding: 6px 20px;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  outline: 0;
+  color: #fff;
+  border-color: transparent;
+}
+
+.btn--primary{
+  background-color: #fbb7a7;
+}
+.btn--primary:hover, .btn--primary:active {
+  background-color: #f95028;
+}
+.btn--primary:active, .btn--primary.active{
+  -webkit-box-shadow: 0 0 0 2px #FFFFFF, 0 0 0 4px #f95028;
+  box-shadow: 0 0 0 2px #FFFFFF, 0 0 0 4px #f95028;
+}
+.result {
+  width: 80%;
+  height: 120px;
+  height: auto;
+  background-color: #f95028;
+  color:#fff;
+  margin: 0 auto 1em;
+  padding: .5em 0;
+  display:flex;
+  align-items: center;
+  justify-content:center;
+  flex-direction: column;
+  border-radius: 10px;
+
+  & p{
+    margin: .3em auto;
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  & .box-loader{
+    display: none;
+  }
+
+  & .loader{
+    height: 120px;
+  }
+}
+
+.result.loading{
+  background: #fff;
+
+  & .box-loader{
+    display: block;
+  }
+
+  & .box-result{
+    display: none;
+  }
+}
+
+/* Animations */
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+    background-position: 0% 50%;
+	}
+}
