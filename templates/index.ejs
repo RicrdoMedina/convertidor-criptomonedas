@@ -11,7 +11,7 @@
     <div class="wrapper">
         <section class="container">
           <h3 class="title">Cotizador de Criptomonedas</h3>
-          <form class="form-criptomonedas" action="">
+          <form id="formCriptomonedas" class="form-criptomonedas" action="">
             <div class="input-group">
               <label for="monedas">Monedas</label>
               <select name="" id="monedas" class="select">
@@ -26,35 +26,18 @@
               <label for="criptomonedas">Criptomonedas</label>
               <select name="" id="criptomonedas" class="select">
                 <option value="">Seleccionar</option>
-                <option value="USD">Dolar Estadounidense</option>
-                <option value="MXN">Peso Mexicano</option>
-                <option value="GBP">Libras</option>
-                <option value="EUR">Euros</option>
+                <option value="usd">Dolar Estadounidense</option>
+                <option value="mxn">Peso Mexicano</option>
+                <option value="gbp">Libras</option>
+                <option value="eur">Euros</option>
               </select>
             </div>
-            <button type="button" class="btn btn--primary">Cotizar</button>
-          </form>
-          <div class="result loading" style="display:none;">
-            <div class="box-loader">
-              <img class="loader" src="./src/images/loader.gif" alt="Loader...">
+            <div id="boxMessage" class="box-message">
             </div>
-            <div class="box-result">
-              <p>
-                <span class="label">Precio etherium</span>
-                <span> 12000</span>
-              </p>
-              <p>
-                <span class="label">Ultima hora</span>
-                <span> 120</span>
-              </p>
-              <p>
-                <span class="label">Ultimos 7 dias</span>
-                <span> 12000</span>
-              </p>
-              <p>
-                <span class="label">Ultima actualizacion</span>
-                <span> 12000</span>
-              </p>
+            <button type="submit" class="btn btn--primary">Cotizar</button>
+          </form>
+          <div class="result">
+            <div class="box-loader">
             </div>
           </div>
         </section>

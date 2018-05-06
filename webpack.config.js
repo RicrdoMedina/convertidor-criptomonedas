@@ -40,6 +40,12 @@ const config = (env, argv) => {
     module:{
       rules: [
         {
+          test: /\.(js)$/,
+          loader: 'eslint-loader',
+          enforce: 'pre',
+          include: [path.resolve(__dirname, './src')]
+        },
+        {
           test:/\.js$/,
           use:{
             loader: 'babel-loader',

@@ -122,7 +122,12 @@ label {
     height: 120px;
   }
 }
-
+.has-warning {
+  background: #ec3232;
+  color: #fff;
+  padding: 10px;
+  border-radius: 4px;
+}
 .result.loading{
   background: #fff;
 

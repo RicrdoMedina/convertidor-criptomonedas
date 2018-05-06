@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Cotizar Criptomonedas",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "standard": "^11.0.1"
+  },
   "devDependencies": {
     "babel-core": "6.26.0",
     "babel-loader": "7.1.4",
