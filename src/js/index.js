@@ -4,6 +4,12 @@ import Cotizador from './class/Cotizador'
 
 console.log('ready!')
 
+window.addEventListener('DOMContentLoaded', function () {
+  setTimeout(() => {
+    document.querySelector('.container').classList.add('slideDown')
+  }, 2000)
+})
+
 const view = new View()
 const cotizador = new Cotizador()
 
@@ -22,11 +28,12 @@ form.addEventListener('submit', (e) => {
 
   if (selectedCoin === '' || selectedCripto === '') {
     console.log('falta datos')
-    const message = 'Seleccione la moneda y la criptomoneda'
+    const message = 'Los campos moneda y criptomoneda son obligatorios'
     const className = 'has-warning'
     view.showMessageError(message, className)
   } else {
     console.log('cotizar')
+    view.showSpinner()
     cotizador.getSelectedCoins(selectedCoin, selectedCripto)
       .then(data => {
         console.log(data.result)
