@@ -1,6 +1,7 @@
 html{
   height: 100%;
 }
+
 body {
   border: 0;
   padding: 0;
@@ -14,11 +15,13 @@ body {
   font-family: "Segoe UI", Arial, sans-serif;
   font-size: 16px;
 }
+
 label {
   font-weight: bold;
   color: #928f8f;
   cursor: pointer;
 }
+
 .wrapper{
   display: grid;
   grid-template: 1fr / 1fr;
@@ -28,6 +31,7 @@ label {
   justify-items: center;
   align-items: center
 }
+
 .wrapper .container{
   grid-area: container-convertidor;
   background: #fff;
@@ -40,21 +44,25 @@ label {
   -webkit-transition: all 1s ease-out;
   transition: all 1s ease-out;
 }
+
 .wrapper .container:hover{
   -webkit-box-shadow: inset 0 0 22px #795548;
           box-shadow: inset 0 0 22px #795548;
   -webkit-transition: all 1s ease-in;
   transition: all 1s ease-in;
 }
+
 .title{
   text-align: center;
   margin-top: 3em;
   margin-bottom: 2em;
 }
+
 .form-criptomonedas{
   margin: 1em auto;
   width: 80%
 }
+
 .form-criptomonedas .select{
   display: block;
   width: 100%;
@@ -68,15 +76,22 @@ label {
   background: rgba(251, 229, 167, 0.4902);
   cursor: pointer;
 }
+
 .form-criptomonedas .select:focus, .form-criptomonedas .select:hover, .form-criptomonedas .select:active {
   border-bottom: 1px solid red;
   -webkit-transition: all 1s ease-in;
   transition: all 1s ease-in;
 }
+
+.form-criptomonedas .box-message{
+  font-size: 14px;
+}
+
 .form-criptomonedas .btn{
   margin: 1em;
   min-width: 136px;
 }
+
 .btn{
   cursor: pointer;
   border-radius: 100px;
@@ -95,9 +110,11 @@ label {
   -webkit-transition: all 1s ease-out;
   transition: all 1s ease-out;
 }
+
 .btn--primary{
   background-color: #fbb7a7;
 }
+
 .btn--primary:hover, .btn--primary:active {
   background-color: #f95028;
   -webkit-transition: all 1s ease-in;
@@ -105,6 +122,7 @@ label {
   -webkit-box-shadow: 0 0 0 2px #FFFFFF, 0 0 0 4px #f95028;
           box-shadow: 0 0 0 2px #FFFFFF, 0 0 0 4px #f95028;
 }
+
 .result {
   width: 80%;
   height: auto;
@@ -117,6 +135,7 @@ label {
   flex-direction: column;
   border-radius: 10px
 }
+
 .result p{
   margin: .6em auto;
   font-weight: bold;
@@ -126,15 +145,19 @@ label {
   align-items: center;
   visibility: hidden;
 }
+
 .result p img {
   width: 30px;
 }
+
 .result p > * {
   margin-right: .2em;
 }
+
 .result .box-loader{
   display: none;
 }
+
 .result .box-result{
   display: flex;
   flex-wrap: wrap;
@@ -142,25 +165,32 @@ label {
   align-items: center;
   padding: .4em;
 }
+
 .result .loader{
   height: 120px;
 }
+
 .has-warning {
   background: #ec3232;
   color: #fff;
   padding: 10px;
   border-radius: 4px;
 }
+
 .result.loading{
   background: #fff
 }
+
 .result.loading .box-loader{
   display: block;
 }
+
 .result.loading .box-result{
   display: none;
 }
+
 /* Animations */
+
 @-webkit-keyframes Gradient {
 	0% {
 		background-position: 0% 50%;
@@ -172,6 +202,7 @@ label {
     background-position: 0% 50%;
 	}
 }
+
 @keyframes Gradient {
 	0% {
 		background-position: 0% 50%;
@@ -183,11 +214,13 @@ label {
     background-position: 0% 50%;
 	}
 }
+
 /*
 ==============================================
 slideDown
 ==============================================
 */
+
 .slideDown{
 	animation-name: slideDown;
 	-webkit-animation-name: slideDown;	
@@ -200,6 +233,7 @@ slideDown
 
 	visibility: visible !important;						
 }
+
 @-webkit-keyframes slideDown {
 	0% {
 		-webkit-transform: translateY(-100%);
@@ -226,6 +260,7 @@ slideDown
 		        transform: translateY(0%);
 	}		
 }
+
 @keyframes slideDown {
 	0% {
 		-webkit-transform: translateY(-100%);
@@ -252,11 +287,13 @@ slideDown
 		        transform: translateY(0%);
 	}		
 }
+
 /*
 ==============================================
 pullUp
 ==============================================
 */
+
 .pullUp{
 	animation-name: pullUp;
 	-webkit-animation-name: pullUp;	
@@ -272,6 +309,7 @@ pullUp
   -webkit-transform-origin: 50% 100%; 
   visibility: visible !important;		
 }
+
 @-webkit-keyframes pullUp {
 	0% {
 		-webkit-transform: scaleY(0.1);
@@ -302,6 +340,7 @@ pullUp
 		        transform: scaleY(1);
 	}							
 }
+
 @keyframes pullUp {
 	0% {
 		-webkit-transform: scaleY(0.1);
@@ -331,4 +370,26 @@ pullUp
 		-webkit-transform: scaleY(1);
 		        transform: scaleY(1);
 	}							
+}
+
+@media ( max-width: 800px ) {
+
+  .wrapper .container{
+    width: 80%;
+  }
+
+  .form-criptomonedas .box-message{
+    font-size: 12px;
+  }
+
+  .result p{
+    font-size: 14px;
+  }
+}
+
+@media ( max-width: 500px ) {
+
+  .wrapper .container{
+    width: 90%;
+  }
 }

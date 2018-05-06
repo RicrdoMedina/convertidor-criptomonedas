@@ -1,3 +1,11 @@
+@custom-media --mobile ( max-width: 500px );
+
+@custom-media --tablet ( max-width: 800px );
+
+@custom-media --desktop ( max-width: 1224px );
+
+@custom-media --largeDesktop  (min-width: 1824px );
+
 html{
   height: 100%;
 }
@@ -36,6 +44,14 @@ label {
     border-radius: 10px;
     visibility: hidden;
     transition: all 1s ease-out;
+
+    @media ( --tablet ) {
+      width: 80%;
+    }
+
+    @media ( --mobile ) {
+      width: 90%;
+    }
   }
 
   & .container:hover{
@@ -72,7 +88,13 @@ label {
     border-bottom: 1px solid red;
     transition: all 1s ease-in;
   }
+  & .box-message{
+    font-size: 14px;
 
+    @media ( --tablet ) {
+      font-size: 12px;
+    }
+  }
   & .btn{
     margin: 1em;
     min-width: 136px;
@@ -123,6 +145,10 @@ label {
     justify-content: center;
     align-items: center;
     visibility: hidden;
+
+    @media ( --tablet ) {
+      font-size: 14px;
+    }
 
     & img {
       width: 30px;
