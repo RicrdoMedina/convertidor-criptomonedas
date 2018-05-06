@@ -47,11 +47,10 @@ export default class View {
     }
   }
   showResult (result, coin) {
-    console.log('coin' + coin)
     const keyCoin = `price_${coin}`
     const value = result[keyCoin]
     const boxResult = document.querySelector('.result')
-    console.log(value)
+
     const hour = new Date(result.last_updated * 1000)
 
     const lastUpdated = `${hour.getHours()}:${hour.getMinutes()} horas`
