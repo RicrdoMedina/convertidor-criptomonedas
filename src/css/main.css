@@ -44,6 +44,7 @@ label {
     border-radius: 10px;
     visibility: hidden;
     transition: all 1s ease-out;
+    margin: 3em auto;
 
     @media ( --tablet ) {
       width: 80%;
